@@ -9,8 +9,7 @@ func (app *application) routes() *http.ServeMux {
 	mux.Handle("/static/", http.StripPrefix("/static", fileServer))
 
 	mux.HandleFunc("/", app.home)
-	mux.HandleFunc("/smth/view", app.smthView)
-	mux.HandleFunc("/smth/viewbyid", app.smthViewById)
-	mux.HandleFunc("/smth/create", app.smthCreate)
+	mux.HandleFunc("/snippet/view", app.snippetView)
+	mux.HandleFunc("/snippet/create", app.snippetCreate)
 	return mux
 }
